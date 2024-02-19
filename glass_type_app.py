@@ -161,7 +161,7 @@ if classifier == 'Random Forest Classifier':
         st.write("The Type of glass predicted is:", glass_type)
         st.write("Accuracy", accuracy.round(2))
         y_pred=rf_clf.predict(X_test)
-        ConfusionMatrixDisplay.from_predictions(y_test,y_pred)
+        st.write(confusion_matrix(y_test,y_pred))
         st.pyplot()
         # S1.1: Implement Logistic Regression with hyperparameter tuning
 if classifier == 'LogisticRegression':
@@ -178,5 +178,5 @@ if classifier == 'LogisticRegression':
         st.write("The Type of glass predicted is:", glass_type)
         st.write("Accuracy", accuracy.round(2))
         y_pred=lr_clf.predict(X_test)
-        ConfusionMatrixDisplay.from_predictions(y_test,y_pred)
+        st.write(confusion_matrix(y_test,y_pred))
         st.pyplot()
